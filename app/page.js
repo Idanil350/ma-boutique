@@ -140,8 +140,8 @@ export default function Home() {
               <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full mb-4">
                 <Zap className="h-10 w-10 text-blue-600" />
               </div>
-              <h3 className="text-2xl font-semibold mb-3">Livraison Rapide</h3>
-              <p className="text-gray-600">Recevez vos commandes en 24-48h partout au Cameroun</p>
+              <h3 className="text-2xl font-semibold mb-3">Livraison</h3>
+              <p className="text-gray-600">Livraison standard : environ 1 mois (produits expédiés depuis la Chine). Livraison express : environ 2 semaines.</p>
             </div>
             
             <div className="text-center p-6 rounded-lg hover:shadow-lg transition">

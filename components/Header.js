@@ -57,10 +57,8 @@ export default function Header({ currency, setCurrency }) {
               <option value="USD">USD ($)</option>
             </select>
 
-            <Link href="/admin" className="text-gray-300 hover:text-white transition">
-              Admin
-            </Link>
-            
+            {/* LE LIEN ADMIN A ÉTÉ SUPPRIMÉ - Invisible pour les clients */}
+
             <Link href="/cart" className="relative group">
               <ShoppingCart className="h-6 w-6 text-gray-300 group-hover:text-white transition" />
               {mounted && totalItems > 0 && (

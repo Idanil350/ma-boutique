@@ -1,8 +1,8 @@
-'use client'
+modifie ça une fois : 'use client'
 import { useEffect, useState } from 'react'
 import Header from '@/components/Header'
 import ProductCard from '@/components/ProductCard'
-import { Zap, Truck, Globe, Package, Sparkles, Gamepad2, Droplets } from 'lucide-react'
+import { Zap, Shield, Globe, Package, Shirt, Sparkles, Gamepad2, Droplets } from 'lucide-react'
 import Link from 'next/link'
 
 const exchangeRates = {
@@ -57,12 +57,48 @@ export default function Home() {
   }
 
   const categoryGroups = [
-    { id: 'chaussures', name: 'Chaussures', icon: Package, desc: 'Homme & Femme', categories: ['chaussures-homme', 'chaussures-femme'] },
-    { id: 'perruques', name: 'Perruques', icon: Sparkles, desc: 'Beauté naturelle', categories: ['perruques'] },
-    { id: 'sacs', name: 'Sacs de Marque', icon: Package, desc: 'Luxe et style', categories: ['sacs-femme'] },
-    { id: 'tech-ai', name: 'Tech IA', icon: Sparkles, desc: 'Innovation technologique', categories: ['tech-ai'] },
-    { id: 'consoles', name: 'Consoles de Jeux', icon: Gamepad2, desc: 'Divertissement ultime', categories: ['consoles'] },
-    { id: 'hygiene', name: 'Hygiène', icon: Droplets, desc: 'Produits essentiels', categories: ['hygiene'] },
+    { 
+      id: 'chaussures', 
+      name: 'Chaussures', 
+      icon: Package, 
+      desc: 'Homme & Femme',
+      categories: ['chaussures-homme', 'chaussures-femme']
+    },
+    { 
+      id: 'perruques', 
+      name: 'Perruques', 
+      icon: Sparkles, 
+      desc: 'Beauté naturelle',
+      categories: ['perruques']
+    },
+    { 
+      id: 'sacs', 
+      name: 'Sacs de Marque', 
+      icon: Package, 
+      desc: 'Luxe et style',
+      categories: ['sacs-femme']
+    },
+    { 
+      id: 'tech-ai', 
+      name: 'Tech IA', 
+      icon: Sparkles, 
+      desc: 'Innovation technologique',
+      categories: ['tech-ai']
+    },
+    { 
+      id: 'consoles', 
+      name: 'Consoles de Jeux', 
+      icon: Gamepad2, 
+      desc: 'Divertissement ultime',
+      categories: ['consoles']
+    },
+    { 
+      id: 'hygiene', 
+      name: 'Hygiène', 
+      icon: Droplets, 
+      desc: 'Produits essentiels',
+      categories: ['hygiene']
+    },
   ]
 
   const productsExist = products.length > 0
@@ -104,26 +140,18 @@ export default function Home() {
               <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-blue-100 to-blue-200 rounded-full mb-4">
                 <Zap className="h-10 w-10 text-blue-600" />
               </div>
-              <h3 className="text-2xl font-semibold mb-3">Livraison Express</h3>
-              <p className="text-gray-600">6 à 14 jours selon la catégorie • Suivi complet</p>
+              <h3 className="text-2xl font-semibold mb-3">Livraison</h3>
+              <p className="text-gray-600">Livraison standard : environ 1 mois (produits expédiés depuis la Chine). Livraison express : 6 a 10 jours .</p>
             </div>
             
-            {/* ← REMPLACEMENT ICI */}
             <div className="text-center p-6 rounded-lg hover:shadow-lg transition">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-indigo-100 to-indigo-200 rounded-full mb-4">
-                <Truck className="h-10 w-10 text-indigo-600" />
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-green-100 to-green-200 rounded-full mb-4">
+                <Shield className="h-10 w-10 text-green-600" />
               </div>
-              <h3 className="text-2xl font-semibold mb-3">Tarifs au kilo</h3>
-              <div className="text-gray-700 space-y-2">
-                <p className="font-medium">
-                  Chaussures & perruques : <span className="font-bold text-gray-900">7 000 FCFA/kg</span>
-                </p>
-                <p className="font-medium">
-                  Consoles & high-tech : <span className="font-bold text-gray-900">10 000 FCFA/kg</span>
-                </p>
-              </div>
+              <h3 className="text-2xl font-semibold mb-3">Paiement Sécurisé</h3>
+              <p className="text-gray-600">Transactions 100% sécurisées avec les meilleurs standards</p>
             </div>
-
+            
             <div className="text-center p-6 rounded-lg hover:shadow-lg transition">
               <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-purple-100 to-purple-200 rounded-full mb-4">
                 <Globe className="h-10 w-10 text-purple-600" />
@@ -144,7 +172,7 @@ export default function Home() {
             {categoryGroups.map((group) => {
               const Icon = group.icon
               const groupProducts = products.filter(p => group.categories.includes(p.category))
- Gentle              const count = groupProducts.length
+              const count = groupProducts.length
               
               return (
                 <button
@@ -202,7 +230,7 @@ export default function Home() {
             <div className="bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-12 shadow-lg">
               <Sparkles className="h-20 w-20 text-gray-400 mx-auto mb-6" />
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Bientôt disponible !
+                Bientôt disponible ! 🚀
               </h2>
               <p className="text-lg text-gray-700 mb-6">
                 Nous préparons une sélection exceptionnelle de produits pour vous.
@@ -210,6 +238,14 @@ export default function Home() {
               <p className="text-gray-600 mb-8">
                 Notre boutique ouvrira très prochainement avec des produits de qualité dans toutes nos catégories.
               </p>
+              <div className="flex justify-center space-x-4">
+                <Link 
+                  href="/admin" 
+                  className="bg-gray-900 text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition inline-block"
+                >
+                  Accès Administrateur
+                </Link>
+              </div>
             </div>
           </div>
         </section>
@@ -222,8 +258,8 @@ export default function Home() {
             Profitez de nos offres exceptionnelles et de notre service client de qualité
           </p>
           <button 
-            onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-            className="bg-white text-gray-900 px-10 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg">
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="bg-white text-gray-900 px-10 py-4 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg">
             Commencer mes achats
           </button>
         </div>

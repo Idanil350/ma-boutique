@@ -141,7 +141,7 @@ export default function Home() {
                 <Zap className="h-10 w-10 text-blue-600" />
               </div>
               <h3 className="text-2xl font-semibold mb-3">Livraison</h3>
-              <p className="text-gray-600">Livraison standard : environ 1 mois (produits expédiés depuis la Chine). Livraison express : 6 a 10 jours .</p>
+              <p className="text-gray-600">Livraison standard : environ 1 mois (produits expédiés depuis la Chine). Livraison express : environ 6 a 10 jours .</p>
             </div>
             
             <div className="text-center p-6 rounded-lg hover:shadow-lg transition">

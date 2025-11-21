@@ -1,4 +1,4 @@
-modifie ça une fois : 'use client'
+'use client'
 import { useEffect, useState } from 'react'
 import Header from '@/components/Header'
 import ProductCard from '@/components/ProductCard'
